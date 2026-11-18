@@ -1,0 +1,358 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #333;
+}
+
+/* MENÚ LATERAL */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 15px;
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f97316;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.menu-titulo {
+    font-size: 12px;
+    color: #999;
+    margin: 20px 10px 10px;
+    text-transform: uppercase;
+}
+
+.sidebar button {
+    width: 100%;
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 13px 15px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    color: #555;
+}
+
+.sidebar button:hover {
+    background-color: #fff0e5;
+    color: #f97316;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido {
+    margin-left: 250px;
+    padding: 25px;
+    min-height: 100vh;
+}
+
+/* BARRA SUPERIOR */
+.barra-superior {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.barra-superior h1 {
+    font-size: 23px;
+    color: #222;
+}
+
+/* MÓDULOS */
+.seccion {
+    display: none;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+.seccion h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* TARJETAS */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tarjeta h3 {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f97316;
+}
+
+/* FORMULARIOS Y PANELES */
+.panel,
+form {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* BOTONES */
+.btn-principal {
+    background-color: #f97316;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-principal:hover {
+    background-color: #ea580c;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background-color: #fff0e5;
+    color: #a3410b;
+}
+
+/* LISTAS */
+#productosRegistrados,
+#listaClientes,
+#listaDomiciliarios,
+#listaInventario {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+@media (max-width: 900px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .contenido {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Títulos de los módulos */
+.seccion h2 {
+    color: #252525;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+/* Formularios */
+form {
+    max-width: 750px;
+    border: 1px solid #eeeeee;
+}
+
+form label {
+    color: #444;
+    font-weight: 600;
+}
+
+input,
+select {
+    background-color: #fafafa;
+    border: 1px solid #dcdcdc;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #f97316;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+/* Botones */
+.btn-principal {
+    background: #f97316;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2);
+}
+
+.btn-principal:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Tablas profesionales */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+th {
+    background: #fff0e5;
+    color: #a3410b;
+    font-weight: 700;
+    padding: 15px;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: #444;
+}
+
+tbody tr:hover {
+    background: #fffaf6;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Tarjetas y paneles */
+.tarjeta,
+.panel {
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover,
+.panel:hover {
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Listas */
+#productosRegistrados,
+#listaClientes,
+#listaDomiciliarios,
+#listaInventario,
+#listaReporteProductos {
+    line-height: 1.7;
+}
+
+/* Menú lateral */
+.sidebar button {
+    transition: 0.2s;
+}
+
+.sidebar button:focus {
+    outline: 2px solid #f97316;
+    background: #fff0e5;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .seccion h2 {
+        font-size: 22px;
+    }
+}
